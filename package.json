@@ -1,0 +1,36 @@
+{
+  "name": "lucian-openui-library",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "OpenUI component library generated from the Lucian UX/UI Prompt collection (400 animated web UI elements).",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --noEmit",
+    "convert": "node scripts/convert.mjs",
+    "spec": "openui generate src/library/library.ts --spec --out src/generated/spec.json",
+    "prompt": "openui generate src/library/library.ts --out dist/prompt.txt"
+  },
+  "dependencies": {
+    "@openuidev/lang-core": "^1.0.1",
+    "@openuidev/react-headless": "^0.18.1",
+    "@openuidev/react-lang": "^1.0.1",
+    "@openuidev/react-ui": "^0.18.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^4.6.0"
+  },
+  "devDependencies": {
+    "@openuidev/cli": "^0.6.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "allowScripts": {
+    "@openuidev/lang-core@1.0.1": true,
+    "esbuild@0.25.12": true
+  }
+}
